@@ -1,15 +1,15 @@
 # 算法:求两数之和
-###要求:
+### 要求:
 给定2个非空链表,链表中分别存储着逆序的正整数.将这两个整数相加, 并按同样的方式返回一个逆序的链表.
 
-#####例如:
+#### 例如:
 ```
 输入: (2 -> 4 -> 3) + (5 -> 6 -> 4)
 输出: 7 -> 0 -> 8
 原因: 342 + 465 = 807.
 ```
 
-###oc参考代码:
+#### oc参考代码:
 ```
 struct ListNode {
     int val;
@@ -46,7 +46,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
 }
 ```
 
-###swift参考代码:
+#### swift参考代码:
 ```
 private class ListNode {
     public var val:Int = 0
