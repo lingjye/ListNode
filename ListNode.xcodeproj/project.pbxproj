@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2E00DB8221D06DB300229E47 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2E00DB8121D06DB300229E47 /* main.m */; };
+		2EE40E8D21DD9D51004BE296 /* ListNodeSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2EE40E8C21DD9D50004BE296 /* ListNodeSwift.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,8 @@
 /* Begin PBXFileReference section */
 		2E00DB7E21D06DB300229E47 /* ListNode */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ListNode; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E00DB8121D06DB300229E47 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		2EE40E8B21DD9D50004BE296 /* ListNode-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ListNode-Bridging-Header.h"; sourceTree = "<group>"; };
+		2EE40E8C21DD9D50004BE296 /* ListNodeSwift.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNodeSwift.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				2E00DB8121D06DB300229E47 /* main.m */,
+				2EE40E8C21DD9D50004BE296 /* ListNodeSwift.swift */,
+				2EE40E8B21DD9D50004BE296 /* ListNode-Bridging-Header.h */,
 			);
 			path = ListNode;
 			sourceTree = "<group>";
@@ -93,6 +98,7 @@
 				TargetAttributes = {
 					2E00DB7D21D06DB300229E47 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 				};
 			};
@@ -119,6 +125,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2E00DB8221D06DB300229E47 /* main.m in Sources */,
+				2EE40E8D21DD9D51004BE296 /* ListNodeSwift.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,16 +246,33 @@
 		2E00DB8621D06DB300229E47 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ListNode/ListNode-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
 		2E00DB8721D06DB300229E47 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ListNode/ListNode-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
