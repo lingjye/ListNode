@@ -34,7 +34,7 @@ class ListNodeSwift: NSObject {
         let l4 = ListNode(7)
         let l5 = ListNode(2)
         let l6 = ListNode(9)
-        let l7 = ListNode(7)
+        let l7 = ListNode(8)
         
         l5.next = l4
         l6.next = l5
@@ -53,7 +53,7 @@ class ListNodeSwift: NSObject {
         var p1 = l1, p2 = l2, current = result
         var carray:Int = 0
         
-        while (p1 != nil || p2 != nil) {
+        while (p1 != nil || p2 != nil || carray > 0) {
             let x = p1?.val ?? 0
             let y = p2?.val ?? 0
             
@@ -72,11 +72,6 @@ class ListNodeSwift: NSObject {
             }
             
         }
-        if carray > 0 {
-            current.val = carray
-            current.next = ListNode(0)
-        }
-        
         return result
     }
     

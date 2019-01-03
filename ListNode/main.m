@@ -20,7 +20,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
     struct ListNode *p = l1, *q = l2, *current = result;
     
     int carry = 0;
-    while (p != NULL || q != NULL) {
+    while (p != NULL || q != NULL || carry) {
         int x = (p != NULL) ? p -> val : 0;
         int y = (q != NULL) ? q -> val : 0;
         
@@ -40,13 +40,7 @@ struct ListNode *addTwoNumbers(struct ListNode *l1, struct ListNode *l2) {
             q = q -> next;
         }
     }
-    if (carry > 0) {
-        current -> next = (struct ListNode *)malloc(sizeof(struct ListNode));
-        current -> next -> next = NULL;
-        current -> val = carry;
-    }
     return result;
-    
 }
 
 int main(int argc, const char * argv[]) {
